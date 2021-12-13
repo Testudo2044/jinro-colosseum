@@ -4,6 +4,9 @@ import React from 'react';
 
 
 
+type Props = {
+    Header:string
+}
 
 const HeaderFunction: React.FC = () =>
   <div className="">
