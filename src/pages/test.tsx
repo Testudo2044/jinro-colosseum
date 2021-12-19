@@ -31,12 +31,24 @@ export default function Layout() {
         </nav>
       </header>
       <main>
-        <div id='ABOUT'>ここにコンテンツを書く</div>
-        <div id='RULE'>ここにコンテンツを書く</div>
-        <div id='SET'>ここにコンテンツを書く</div>
-        <div id='CHARACTER'>ここにコンテンツを書く</div>
-        <div id='MEMBER'>ここにコンテンツを書く</div>
-        <div id='COMTACT'>ここにコンテンツを書く</div>
+        <div id='ABOUT' className='m-80'>
+          ABOUT
+        </div>
+        <div id='RULE' className='m-80'>
+          RULE
+        </div>
+        <div id='SET' className='m-80'>
+          SET
+        </div>
+        <div id='CHARACTER' className='m-80'>
+          CHARACTER
+        </div>
+        <div id='MEMBER' className='m-80'>
+          MEMBER
+        </div>
+        <div id='COMTACT' className='m-80'>
+          COMTACT
+        </div>
       </main>
     </div>
   );
