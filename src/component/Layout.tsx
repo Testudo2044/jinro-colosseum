@@ -1,9 +1,5 @@
-
 import Head from 'next/head';
-import Link from 'next/link'
-import React from 'react';
-import Image from 'next/image'
-import { twitter_icon } from 'component/twitter';
+import Link from 'next/link';
 
 const HeaderFunction: React.FC = () => (
   <div className=''>
@@ -71,54 +67,3 @@ const HeaderFunction: React.FC = () => (
     </div>
   </div>
 );
-
-
-const MainFunction: React.FC = () => (
-  <div>
-
-  </div>
-);
-
-{/*
-const FooterFunction: React.FC = () => (
-  <div>
-    <div>
-      <li>
-        <a href='https://www.youtube.com/'></a>
-        <Link image='/public/image/instagram_icon.jpg'></Link>
-      </li>
-      <li>
-        <a href='https://twitter.com/home'>
-        </a>
-        <Link image='/public/image/twitter_icon.jpg'></Link>
-      </li>
-      <li>
-        <a href='https://www.instagram.com/?hl=ja'></a>
-        <Link image='/public/image/instagram_icon.jpg'></Link>
-      </li>
-      <li className='text-center'>
-        <a>CopyLight © 2021 Jinro colosseum</a>
-      </li>
-    </div>
-  </div>
-);
-*/}
-
-
-export default function Index() {
-  return (
-    <div>
-      <Head>
-        <title>人狼コロシアム</title>
-        <meta name='description' content='test' />
-      </Head>
-      <HeaderFunction />
-      <MainFunction />
-      <twitter_icon />
-      {/*
-
-      <FooterFunction />
-      */}
-    </div>
-  );
-}
