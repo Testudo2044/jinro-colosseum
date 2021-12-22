@@ -1,4 +1,3 @@
-//[応用例]
 
 import { Link as Scroll } from 'react-scroll';
 
@@ -50,6 +49,9 @@ export default function Layout() {
           COMTACT
         </div>
       </main>
+      <footer>
+        <div></div>
+      </footer>
     </div>
   );
 }

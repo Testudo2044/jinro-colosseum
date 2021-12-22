@@ -1,124 +1,53 @@
+import { Link as Scroll } from 'react-scroll';
 
-import Head from 'next/head';
-import Link from 'next/link'
-import React from 'react';
-import Image from 'next/image'
-import { twitter_icon } from 'component/twitter';
-
-const HeaderFunction: React.FC = () => (
-  <div className=''>
-    <div className='smartStyle'></div>
-
-    <div className='hidden lg:block PCStyle'>
-      <div className='bg-black '>
-        <ul className='flex text-2xl text-white'>
-          <li className='lg:hover:text-3xl'>
-            <Link href='/'>
-              <a>
-                <ruby>
-                  ABOUT<rt>UN人狼とは</rt>
-                </ruby>
-              </a>
-            </Link>
-          </li>
-          <li className='lg:hover:text-3xl'>
-            <Link href='/'>
-              <a>
-                <ruby>
-                  RULE<rt>ゲームルール</rt>
-                </ruby>
-              </a>
-            </Link>
-          </li>
-          <li className='lg:hover:text-3xl'>
-            <Link href='/'>
-              <a>
-                <ruby>
-                  SET<rt>販売</rt>
-                </ruby>
-              </a>
-            </Link>
-          </li>
-          <li className='lg:hover:text-3xl'>
-            <Link href='/'>
-              <a>
-                <ruby>
-                  CHARACTER<rt>役職紹介</rt>
-                </ruby>
-              </a>
-            </Link>
-          </li>
-          <li className='lg:hover:text-3xl'>
-            <Link href='/'>
-              <a>
-                <ruby>
-                  MEMBER<rt>メンバー</rt>
-                </ruby>
-              </a>
-            </Link>
-          </li>
-          <li className='lg:hover:text-3xl'>
-            <Link href='/'>
-              <a>
-                <ruby>
-                  COMTACT<rt>お問い合わせ</rt>
-                </ruby>
-              </a>
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-);
-
-
-const MainFunction: React.FC = () => (
-  <div>
-
-  </div>
-);
-
-{/*
-const FooterFunction: React.FC = () => (
-  <div>
-    <div>
-      <li>
-        <a href='https://www.youtube.com/'></a>
-        <Link image='/public/image/instagram_icon.jpg'></Link>
-      </li>
-      <li>
-        <a href='https://twitter.com/home'>
-        </a>
-        <Link image='/public/image/twitter_icon.jpg'></Link>
-      </li>
-      <li>
-        <a href='https://www.instagram.com/?hl=ja'></a>
-        <Link image='/public/image/instagram_icon.jpg'></Link>
-      </li>
-      <li className='text-center'>
-        <a>CopyLight © 2021 Jinro colosseum</a>
-      </li>
-    </div>
-  </div>
-);
-*/}
-
-
-export default function Index() {
+export default function Layout() {
+  {
+    /* map関数で取り出してタグを生成する。 */
+  }
+  const navItem = ['ABOUT', 'RULE', 'SET', 'CHARACTER', 'MEMBER', 'COMTACT'];
   return (
-    <div>
-      <Head>
-        <title>人狼コロシアム</title>
-        <meta name='description' content='test' />
-      </Head>
-      <HeaderFunction />
-      <MainFunction />
-      <twitter_icon />
-      {/*
-
-      <FooterFunction />
-      */}
+    <div className='bg-black'>
+      <header className='pt-10 h-20'>
+        <nav className='bg-black'>
+          {/* map関数で取り出してタグを生成する。 */}
+          <div className='flex fixed space-x-6 md:space-x-8 lg:space-x-10'>
+            {navItem.map((item, index) => {
+              return (
+                <Scroll
+                  to={`${item}`}
+                  className='PCStyle hidden text-white lg:block lg:hover:text-3xl lg:w-20 lg:justify-center uppercase'
+                  smooth={true}
+                  duration={600}
+                  key={index}
+                  offset={-30}
+                >
+                  {item}
+                </Scroll>
+              );
+            })}
+          </div>
+        </nav>
+      </header>
+      <main className='bg-black text-white'>
+        <div id='ABOUT' className='mx-80 pt-80'>
+          ABOUT
+        </div>
+        <div id='RULE' className='m-80'>
+          RULE
+        </div>
+        <div id='SET' className='m-80'>
+          SET
+        </div>
+        <div id='CHARACTER' className='m-80'>
+          CHARACTER
+        </div>
+        <div id='MEMBER' className='m-80'>
+          MEMBER
+        </div>
+        <div id='COMTACT' className='mx-80 pb-80'>
+          COMTACT
+        </div>
+      </main>
     </div>
   );
 }
